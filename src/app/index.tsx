@@ -1,6 +1,5 @@
 import "@/styles/global.css";
 
-import { Header } from "@/components/header";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { Menu } from "@/components/menu";
 import { DesapegoCard } from "@/components/desapegoCard";
@@ -8,11 +7,11 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { SlidersHorizontal } from "lucide-react-native";
 import { colors } from "@/styles/colors";
+import { Link, Slot } from "expo-router";
 
 export default function Home() {
   return (
     <>
-      <Header />
       <ScrollView className="flex-1 p-4">
         <View className="flex-row items-center">
           <Input
@@ -22,7 +21,7 @@ export default function Home() {
           ></Input>
           <Button
             label="Filtros"
-            className="flex-1/3 rounded-xl h-14 border border-purple-500"
+            className="flex-1/3 rounded-xl h-14 border border-purple-500 px-6"
           >
             <SlidersHorizontal color={colors.white} />
           </Button>
@@ -44,8 +43,13 @@ export default function Home() {
             <Text className="font-bold">Brinquedos</Text>
           </TouchableOpacity>
         </View>
+        <Link href="/login">
+            login
+          </Link>
         <View className="flex-wrap flex-row gap-4 justify-between">
-          <DesapegoCard />
+          <Link href="/login" asChild>
+            <DesapegoCard />
+          </Link>
           <DesapegoCard />
           <DesapegoCard />
           <DesapegoCard />
@@ -54,7 +58,6 @@ export default function Home() {
           <DesapegoCard />
         </View>
       </ScrollView>
-      <Menu />
     </>
   );
 }

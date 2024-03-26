@@ -18,7 +18,7 @@ const Input = forwardRef<React.ElementRef<typeof TextInput>, InputProps>(
       placeholderTextColor={colors.purple[100]}
         className={cn(
           inputClasses,
-          'border border-input py-2.5 px-4 rounded-lg border-purple-500 text-purple-100'
+          'border border-input py-2.5 px-4 rounded-xl border-purple-500 text-purple-100'
         )}
         {...props}
       />
