@@ -11,6 +11,7 @@
   "dependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.24.1",
     "@expo-google-fonts/nunito": "^0.2.3",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "expo": "~50.0.14",
     "expo-constants": "~15.4.5",

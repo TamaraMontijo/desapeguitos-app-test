@@ -12,7 +12,7 @@ import {
 
 export function DesapegoCard() {
   return (
-    <Card className="w-[48%] h-[220px] shadow">
+    <Card className="w-[48%] h-[220px] border-blue border rounded-xl">
       <Image
         className="w-full h-1/2 rounded-t-xl"
         source={require("@/assets/camiseta.png")}
